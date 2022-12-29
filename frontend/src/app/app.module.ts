@@ -9,6 +9,8 @@ import { SignupComponent } from './component/signup/signup.component';
 import { ProfileComponent } from './component/profile/profile.component';
 import { RequestResetComponent } from './component/password/request-reset/request-reset.component';
 import { ResponseResetComponent } from './component/password/response-reset/response-reset.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ResponseResetComponent } from './component/password/response-reset/resp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

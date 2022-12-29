@@ -1,1 +1,32 @@
-<p>login works!</p>
+<div class="mt-4 col-8 offset-2">
+    <div class="card">
+        <div class="card-header">Login Here</div>
+        <div class="card-body">
+            <form #loginFrom=ngForm (ngSubmit)="onSubmit()" >
+
+                <div class="alert alert-danger" [hidden]="!error">
+                    {{ error }}
+                </div>
+
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" [(ngModel)]="uForm.email" required>    
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" name="password" id="password" [(ngModel)]="uForm.password" required>
+                </div>
+                
+                <div class="row">
+                    <div class="col-10">
+                        <button type="submit" class="btn btn-primary" [disabled]="!loginFrom.valid" >Submit</button>
+                    </div>
+                    <div class="col-2 float-right">
+                        <a class="btn btn-info float-right" routerLink="/signup"  >Sign up</a>
+                    </div>
+                </div>
+
+              </form>
+        </div>
+    </div>
+</div>
